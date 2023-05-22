@@ -1,0 +1,185 @@
+1)
+
+eta_studenti=[20,30,40,50,60]
+somma_parziale=0
+for eta in eta_studenti:
+    somma=somma_parziale+eta
+    somma_parziale=somma
+print(somma/len(eta_studenti))
+
+
+2)
+
+x=0
+while x<=10:
+    pot=2**x
+    print(pot)
+    x=x+1
+
+3)
+
+esponenti=[0,1,2,3,4,5,6,7,8,9,10]
+for esponente in range(0,11,1):
+    print(2**esponente)
+
+4)
+
+n=0
+k=int(input("Inserisci il numero dell'esponente fino al quale vuoi visualizzare la potenza"))
+while n<=k:
+    pot=2**n
+    n=n+1
+    print(pot)
+
+5)
+
+lista=[]
+n=0
+k=int(input("Inserisci il numero dell'esponente fino al quale vuoi visualizzare la potenza"))
+while n<=k:
+    pot=2**n
+    n=n+1
+    lista.append(pot)
+print(lista)
+
+6)
+
+lista=[]
+n=0
+k=int(input("Inserisci il numero dell'esponente fino al quale vuoi visualizzare la potenza"))
+while n<=k:
+    pot=3**n
+    n=n+1
+    lista.append(pot)
+print(lista)
+
+7)
+
+lista=[]
+k=int(input("Inserisci la base"))
+n_inserito=int(input("Inserisci il numero dell'esponente fino al quale vuoi visualizzare la potenza"))
+n=0
+while n<=n_inserito:
+    pot=k**n
+    n=n+1
+    lista.append(pot)
+print(lista)
+
+8)
+
+n=0
+pot=2**n
+while 2**n<=25000:
+    pot=2**n
+    n=n+1
+    print(pot)
+
+9)
+
+m=0
+pot=2**m
+n=int(input("Inserisci il valore che la potenza non deve superare"))
+while 2**m<=n:
+    pot=2**m
+    m=m+1
+    print(pot)
+
+10)
+
+lista=[]
+for esponente in range(0,101,3):
+	lista.append(2**esponente)
+print(lista)
+
+OPPURE
+
+lista=[]
+for esponente in range(100):
+    if esponente %3==0:
+        lista.append(2**esponente)
+print(lista)
+	
+11)
+
+studenti = ["Alex", "Bob", "Cindy", "Dan", "Emma", "Faith", "Grace", "Henry"]
+for studente in studenti:
+    print("-",studente)
+
+12)
+
+studenti = ["Alex", "Bob", "Cindy", "Dan", "Emma", "Faith", "Grace", "Henry"]
+corsi = ["Cybersecurity", "Data Analyst", "Backend", "Frontend", "Data Analyst", "Backend", "Frontend"]
+if len(studenti)==len(corsi):
+    print("Le liste studenti e corsi hanno la stessa lunghezza.")
+else:
+    print("Le liste studenti e corsi non hanno la stessa lunghezza.")
+    
+13)
+
+studenti = ["Alex", "Bob", "Cindy", "Dan", "Emma", "Faith", "Grace", "Henry"]
+corsi = ["Cybersecurity", "Data Analyst", "Backend", "Frontend", "Data Analyst", "Backend"]
+corsi.append("Frontend")
+corsi.append("Cybersecurity")
+if len(studenti)==len(corsi):
+	print(corsi)
+
+14)
+
+studenti = ["Alex", "Bob", "Cindy", "Dan", "Emma", "Faith", "Grace", "Henry"]
+corsi = ["Cybersecurity", "Data Analyst", "Backend", "Frontend", "Data Analyst", "Backend", "Frontend", "Cybersecurity"]
+edizioni = [1, 2, 3, 2, 2, 1, 3, 3]
+indice_studenti=0
+indice_corsi=0
+indice_edizioni=0
+for studente in studenti:
+    print(studenti[indice_studenti],' segue ',corsi[indice_corsi],', ',edizioni[indice_edizioni],' edizione', sep="")
+    indice_studenti+=1
+    indice_corsi+=1
+    indice_edizioni+=1
+
+15)
+
+parole = ["Albergo", "Sedia", "Borgo", "Petalo", "Belvedere", "Semestre", "Sosta", "Orpello", "Abete"]
+for parola in parole:
+    num_e=0
+    for e in parola:
+        if e=='e':
+            num_e=num_e+1
+    print('Le E sono:',num_e)
+
+16)
+
+lista=[]
+lista_cf = ["ABCDEF95G01A123B", "GHIJKL91M02A321C", "MNOPQR89S03A456D", "STUVWX95Z04A654E", "XYZABC01D05A789F", "DEFGHI95J06A987G"]
+for cf in lista_cf:
+    if "95" in cf:
+        lista.append(cf)
+print(lista)
+
+17)
+
+parole = ["Albergo", "Sedia", "Borgo", "Petalo", "Eremo", "Belvedere", "Semestre", "Esteta", "Sosta", "Orpello", "Abete", "Orologio", "Cesta", "Ermellino"]
+for parola in parole:
+    n_e=0
+    for car in parola:
+        if car in 'ЭзеЁΈΕEeëêξÊÈÉ€ËéèפЄ€ξ∑∑ẾЕỀỂỄéèέєЄeعЭєзэεэёĘęëê':
+            n_e+=1
+    print('La e compare',n_e,'volte')
+
+18)
+
+studenti = ["Alex", "Bob", "Cindy", "Dan", "Emma", "Faith", "Grace", "Henry"]
+edizioni = [1, 2, 3, 2, 2, 1, 3, 3]
+for x in range(len(studenti)):
+    if edizioni[x]==1:
+        print(studenti[x])
+
+19) 
+
+Ogni posizione o indice delle tre liste in linguaggio Python rappresenta in codice SQL un record di una tabella.
+
+20)
+
+lista_cf = ["ABCDEF95G01A123B", "GHIJKL91M02A321C", "MNOPQR89S03A456D", "STUVWX95Z04A654E", "XYZABC01D05A789F", "DEFGHI95J06A987G"]
+for cf in lista_cf:
+    print("Dati relativi al nome:",cf[3:6],'.'," Dati relativi al cognome:",cf[0:3],'.',sep="")

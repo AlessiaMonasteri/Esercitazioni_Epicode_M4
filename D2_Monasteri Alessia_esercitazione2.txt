@@ -1,0 +1,28 @@
+2)
+litri_in=input('Quanti litri di benzina ci sono nel serbatoio?')
+efficienza_in=input('Qual è l\'efficienza espressa in km/l?') 
+prezzo_in=input('Qual è il prezzo della benzina in €/l?') 
+litri=float(litri_in)
+efficienza=float(efficienza_in)
+prezzo=float(prezzo_in)
+distanza=litri*efficienza
+costo_100km= 100/efficienza*prezzo
+in_distanza='La distanza percorribile è di km:'
+in_costo='Il costo della benzina per 100km è di €:'
+stringa_costo_100km=str(costo_100km)
+stringa_in_distanza= str(in_distanza)
+print(in_distanza,distanza)
+print(in_costo,costo_100km)
+
+3)
+misura_in_m=float(input('Quanto misura in metri?'))
+miglia=misura_in_m*0.000621371
+piedi=misura_in_m*3.28084
+pollici=misura_in_m*39.3701
+print('La misura in miglia è di:',miglia,'\n'
+      'La misura in piedi è di:',piedi,'\n'
+      'La misura in pollici è di:',pollici)
+
+4)
+stringa=input('Inserisci una stringa')
+print(stringa[:3],'...',stringa[3:],sep="")

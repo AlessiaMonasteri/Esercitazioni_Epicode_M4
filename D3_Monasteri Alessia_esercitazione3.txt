@@ -1,0 +1,70 @@
+1)
+numero_passi=int(input('Inserisci il numero di passi'))
+direzione_passi=str(input('Inserisci la direzione'))
+x=0
+y=0
+posizione_0=(x,y)
+
+if direzione_passi=='nord':
+    y=numero_passi
+    posizione_1=print(x,';',y)
+elif direzione_passi=='sud':
+    y=int(-(numero_passi))
+    posizione_1=print(x,';',y)
+elif direzione_passi=='ovest':
+    x=int(-(numero_passi)) 
+    posizione_1=print(x,';',y)
+elif direzione_passi=='est':
+    x=numero_passi
+    posizione_1=print(x,';',y)
+
+numero_passi_2=int(input('Spostamento successivo. Inserisci il numero di passi'))
+direzione_passi_2=input('Inserisci la direzione')
+k=0
+z=0
+
+if direzione_passi_2=='nord':
+    z=numero_passi_2
+    posizione_2=print(k,';',z)
+elif direzione_passi_2=='sud':
+    z=int(-(numero_passi_2))
+    posizione_2=print(k,';',z)
+elif direzione_passi_2=='ovest':
+    k=int(-(numero_passi_2))
+    posizione_2=print(k,';',z)
+elif direzione_passi_2=='est':
+    k=numero_passi_2
+    posizione_2=print(k,';',z)
+    
+print('L\'attuale posizione è',x+k,';',y+z)
+
+2)
+stringa=input('Inserisci una stringa')
+conta=len(stringa)
+if conta >=6:
+    print(stringa[:3],'...',stringa[3:], sep="")
+elif conta == 5:
+    print(stringa[:3],'...',stringa[2:], sep="")
+elif conta == 4:
+    print(stringa[:3],'...',stringa[1:], sep="")
+else:
+    print(stringa,'...',stringa, sep="")
+
+3)
+numero=int(input('inserisci un numero intero positivo'))
+z=1
+y=2**z
+while 2**z<=numero:
+    z=z+1
+print('Il numero che più si avvicina al numero da te inserito è 2*',z-1, sep="")
+
+4)
+r=4
+while r<=76:
+    print (r)
+    r=r+4
+print(r)
+
+5)
+m='marmalade'
+m.replace('a','e')

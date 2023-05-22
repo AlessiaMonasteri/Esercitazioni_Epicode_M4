@@ -1,0 +1,38 @@
+ESERCIZI LEZIONE DI ESERCITAZIONE 05-05-23
+
+1) Stampare a video, tramite un ciclo while, tutti i numeri da 0 a 20.
+
+n=0
+while n<=20:
+    print(n)
+    n=n+1
+
+
+2) Partendo dalla lista numeri=[4,10,5,1,7,3],
+utilizzando il ciclo for, trovare il valore max e il min della lista.
+
+numeri=[4,10,5,1,7,3]
+massimo_temporaneo=numeri[0]
+for numero in numeri:
+    if numero>massimo_temporaneo:
+        massimo_temporaneo=numero
+print(massimo_temporaneo)
+
+
+numeri=[4,10,5,1,7,3]
+minore_temporaneo=1000   
+for numero in numeri:
+    if numero<minore_temporaneo:
+        minore_temporaneo=numero
+print(minore_temporaneo)
+
+
+3) Lista: eta_studenti=[20,30,40,50,60]
+Utilizzando un ciclo for calcolare la media delle età.
+
+eta_studenti=[20,30,40,50,60]
+somma_parziale=0
+for eta in eta_studenti:
+    somma=somma_parziale+eta
+    somma_parziale=somma
+print(somma/len(eta_studenti))

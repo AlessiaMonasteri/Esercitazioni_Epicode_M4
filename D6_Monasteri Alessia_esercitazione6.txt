@@ -1,0 +1,125 @@
+1)
+proprietario_auto={'Ada':'Punto','Ben':'Multipla','Charlie':'Golf','Debbie':'107'}
+print(proprietario_auto)
+print(proprietario_auto['Debbie'])
+
+2)
+proprietario_auto['Emily']='A1'
+proprietario_auto['Fred']='Octavia'
+print(proprietario_auto)
+
+3)
+nuovi_proprietari = {"Ben": "Polo", "Fred": "Octavia", "Grace": "Yaris", "Hugh": "Clio"}
+proprietario_auto.update({"Ben": "Polo", "Fred": "Octavia", "Grace": "Yaris", "Hugh": "Clio"})
+# Ben è stato sovrascritto.
+
+4)
+richiesta=['Hugh', 'Ada', 'Emily','Debbie']
+for prop in richiesta:
+    print('L\'auto di',prop,'è una',proprietario_auto[prop])
+
+5)
+richiesta2=['Ada','Emily','Jade','Ben','Hugh','Kelly','Charlie']
+for prop in richiesta2:
+    if prop in proprietario_auto:
+        print('L\'auto di',prop,'è una',proprietario_auto[prop])
+    else:
+        print('Questo proprietario non risulta essere presente nel dizionario')
+
+6)
+diz = {"a": 121, "zy": 3774, "qop": 147726, "ab": 328, "k": 12, "clap": 9}
+diz.keys()
+
+7)
+diz = {"a": 121, "zy": 3774, "qop": 147726, "ab": 328, "k": 12, "clap": 9}
+diz.values()
+
+8)
+diz = {"a": 121, "zy": 3774, "qop": 147726, "ab": 328, "k": 12, "clap": 9}
+for chiave, valore in diz.items():
+    print(chiave, valore)
+
+9)
+diz = {"a": 121, "zy": 3774, "qop": 147726, "ab": 328, "k": 12, "clap": 9}
+valori=diz.values()
+print("Il massimo dei valori è",max(valori),"; il minimo dei valori è",min(valori),"; la somma dei valori è",sum(valori),".")
+
+10)
+dizionario_auto = {"Ada": "Punto", "Ben": "Multipla", "Charlie": "Golf", "Debbie": "107"}
+for prop,auto in dizionario_auto.items():
+    print(prop,"guida una",auto)
+
+11)
+dizionario_auto = {"Ada": "Punto", "Ben": "Multipla", "Charlie": "Golf", "Debbie": "107"}
+for auto in dizionario_auto.values():
+    if auto!='Multipla':
+        print(auto)
+
+12)
+collezionisti = {
+    "Ada": {
+        "Funko Pop": 5,
+        "action figures": 5,
+        "manga": 35
+    },
+    "Ben": {
+        "Funko Pop": 2,
+        "action figures": 6,
+        "manga": 40,
+        "graphic novels": {
+            "DC": 2
+        }
+    },
+    "Charlie": {
+        "action figures": 31,
+        "graphic novels": {
+            "Marvel": 10,
+            "DC": 8
+        }
+    },
+    "Debbie": {
+        "Funko Pop": 1,
+        "graphic novels": {
+            "DC": 4,
+            "Marvel": 5
+        },
+        "manga": 25,
+        "action figures": 2
+    }
+}
+
+
+13)
+#1 print('Ada ha',collezionisti['Ada']['funko pop'],'Funko Pop')
+
+#2 print('Ben ha',collezionisti['Ben']['manga'],'Manga')
+
+#3 print('Debbie ha',collezionisti['Debbie']['graphic novels']['Marvel'],'Graphic Novels della Marvel')
+
+#4 print('Ada e Ben hanno',collezionisti['Ada']['funko pop']+collezionisti['Ben']['funko pop'],'Funko Pop')
+
+#5 num_manga=0
+for nome in collezionisti:
+    if 'manga' in collezionisti[nome]:
+        num_manga=num_manga+collezionisti[nome]['manga']
+print('I collezionisti hanno',num_manga,'Manga')
+
+#6 somma_novel_DC = 0
+for nome in collezionisti:
+    if "graphic novels" in collezionisti[nome]:
+        if "DC" in collezionisti[nome]["graphic novels"]:
+            somma_novel_DC += collezionisti[nome]["graphic novels"]["DC"]
+print( "I collezionisti hanno", somma_novel_DC,"Graphic Novels della DC" )
+
+#7 somma_novel = 0
+for nome in collezionisti:
+    if "graphic novels" in collezionisti[nome]:
+        for franchise in collezionisti[nome]["graphic novels"]:
+            somma_novel += collezionisti[nome]["graphic novels"][franchise]
+print( "I collezionisti hanno", somma_novel, 'Graphic Novels' )
+
+
+
+
+
+
